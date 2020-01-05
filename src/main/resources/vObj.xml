@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vobjs>
+  <vo class="com.demo2.trade.entity.Customer" tableName="Customer">
+    <property name="id" column="id" isPrimaryKey="true"></property>
+    <property name="name" column="name"></property>
+    <property name="sex" column="sex"></property>
+    <property name="birthday" column="birthday"></property>
+    <property name="identification" column="identification"></property>
+    <property name="phone_number" column="phone_number"></property>
+    <join name="addresses" joinKey="customer_id" joinType="oneToMany" class="com.demo2.trade.entity.Address"></join>
+  </vo>
+  <vo class="com.demo2.trade.entity.Address" tableName="Address">
+  	<property name="id" column="id" isPrimaryKey="true"></property>
+  	<property name="customer_id" column="customer_id"></property>
+  	<property name="country" column="country"></property>
+  	<property name="province" column="province"></property>
+  	<property name="city" column="city"></property>
+  	<property name="zone" column="zone"></property>
+  	<property name="address" column="address"></property>
+  	<property name="phone_number" column="phone_number"></property>
+  </vo>
+</vobjs>
