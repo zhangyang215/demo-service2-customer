@@ -10,11 +10,7 @@ spring:
       # discovery:
       #   enabled: true
       #   serviceId: service-config
-  datasource:
-    url: jdbc:mysql://172.19.1.110:3306/demo
-    username: root
-    password: fangang12321
-    type: com.alibaba.druid.pool.DruidDataSource
+
 mybatis:
   mapperLocations: classpath:mapper/*Mapper.xml
 feign:
@@ -22,13 +18,18 @@ feign:
     enabled: true
 logging:
   level:
-    org.easydev.customer: debug
+    com.demo2.customer: debug
     
 ---
 spring:
   profiles: dev
   sleuth:
     enabled: false
+  datasource:
+    url: jdbc:mysql://139.9.35.139:3306/demo
+    username: root
+    password: 1234
+    type: com.alibaba.druid.pool.DruidDataSource
 server:
   port: 9002
 

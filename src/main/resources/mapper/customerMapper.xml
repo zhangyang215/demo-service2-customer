@@ -33,7 +33,7 @@
 		</if>
 	</sql>
 	
-	<select id="query" parameterType="java.util.HashMap" resultType="com.demo2.trade.entity.Customer">
+	<select id="query" parameterType="java.util.HashMap" resultType="com.demo2.customer.entity.Customer">
 		   <include refid="isCount1"/> 
 		   	 	SELECT * FROM Customer WHERE 1 = 1
 				<include refid="searchParam"/>

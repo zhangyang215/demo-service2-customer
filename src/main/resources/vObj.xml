@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vobjs>
-  <vo class="com.demo2.trade.entity.Customer" tableName="Customer">
+  <vo class="com.demo2.customer.entity.Customer" tableName="Customer">
     <property name="id" column="id" isPrimaryKey="true"></property>
     <property name="name" column="name"></property>
     <property name="sex" column="sex"></property>
     <property name="birthday" column="birthday"></property>
     <property name="identification" column="identification"></property>
     <property name="phone_number" column="phone_number"></property>
-    <join name="addresses" joinKey="customer_id" joinType="oneToMany" class="com.demo2.trade.entity.Address"></join>
+    <join name="addresses" joinKey="customer_id" joinType="oneToMany" class="com.demo2.customer.entity.Address"></join>
   </vo>
-  <vo class="com.demo2.trade.entity.Address" tableName="Address">
+  <vo class="com.demo2.customer.entity.Address" tableName="Address">
   	<property name="id" column="id" isPrimaryKey="true"></property>
   	<property name="customer_id" column="customer_id"></property>
   	<property name="country" column="country"></property>
