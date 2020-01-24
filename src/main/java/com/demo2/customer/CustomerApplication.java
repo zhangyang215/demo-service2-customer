@@ -17,7 +17,7 @@ import org.springframework.context.annotation.ImportResource;
 @SpringBootApplication
 @Configuration
 @ComponentScan(basePackages={"com.demo2"})
-@ImportResource(locations={"classpath:applicationContext-*.xml"})
+@ImportResource(locations={"classpath*:applicationContext-*.xml"})
 @MapperScan("com.demo2.support.dao")
 @EnableEurekaClient
 public class CustomerApplication {
@@ -27,6 +27,9 @@ public class CustomerApplication {
 	 */
 	public static void main(String[] args) {
 		SpringApplication.run(CustomerApplication.class, args);
+		System.out.println(".....................................");
+		System.out.println("...The Customer Application started..");
+		System.out.println(".....................................");
 	}
 
 }

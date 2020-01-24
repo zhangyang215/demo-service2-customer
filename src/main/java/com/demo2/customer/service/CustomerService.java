@@ -3,6 +3,7 @@
  */
 package com.demo2.customer.service;
 
+import com.demo2.customer.entity.Address;
 import com.demo2.customer.entity.Customer;
 
 /**
@@ -20,4 +21,15 @@ public interface CustomerService {
 	 * @param id
 	 */
 	public void delete(long id);
+	/**
+	 * @param id
+	 * @return the customer of the id.
+	 */
+	public Customer load(long id);
+	
+	/**
+	 * @param id
+	 * @return the address of the id
+	 */
+	public Address loadAddress(long id);
 }

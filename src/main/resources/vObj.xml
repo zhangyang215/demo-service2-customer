@@ -7,7 +7,7 @@
     <property name="birthday" column="birthday"></property>
     <property name="identification" column="identification"></property>
     <property name="phone_number" column="phone_number"></property>
-    <join name="addresses" joinKey="customer_id" joinType="oneToMany" class="com.demo2.customer.entity.Address"></join>
+    <join name="addresses" joinKey="customer_id" joinType="oneToMany" isAggregation="true" class="com.demo2.customer.entity.Address"></join>
   </vo>
   <vo class="com.demo2.customer.entity.Address" tableName="Address">
   	<property name="id" column="id" isPrimaryKey="true"></property>
