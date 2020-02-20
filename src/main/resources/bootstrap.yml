@@ -27,14 +27,14 @@ spring:
   sleuth:
     enabled: false
   datasource:
-    url: jdbc:mysql://139.9.35.139:3306/demo
+    url: jdbc:mysql://47.105.194.89:32306/demo
     username: root
     password: 1234
     type: com.alibaba.druid.pool.DruidDataSource
   redis:
     database: 0
-    host: 139.9.35.139
-    port: 6379
+    host: 47.105.194.89
+    port: 31379
     password: 
     pool:
       maxActive: 200
