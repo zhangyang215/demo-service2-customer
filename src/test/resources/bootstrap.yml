@@ -33,7 +33,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
   redis:
     database: 0
-    host: 47.105.194.89
+    host: 47.105.178.19
     port: 31379
     password: 
     pool:
