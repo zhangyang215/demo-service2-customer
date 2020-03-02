@@ -16,6 +16,11 @@ mybatis:
 feign:
   hystrix:
     enabled: true
+management:
+  endpoints:
+    web:
+      exposure: 
+        include: 'hystrix.stream'
 logging:
   level:
     com.demo2.customer: debug
