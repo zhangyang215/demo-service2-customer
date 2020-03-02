@@ -6,7 +6,7 @@ spring:
   cloud:
     config:
       uri: ${GIT_URL:http://localhost:9000/}
-      failFast: true
+      failFast: false
       # discovery:
       #   enabled: true
       #   serviceId: service-config
@@ -16,11 +16,7 @@ mybatis:
 feign:
   hystrix:
     enabled: true
-management:
-  endpoints:
-    web:
-      exposure: 
-        include: 'hystrix.stream'
+
 logging:
   level:
     com.demo2.customer: debug
