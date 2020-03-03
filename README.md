@@ -333,11 +333,11 @@ public interface SupplierService {
 ```bash
 service-customer:
 
-curl -X POST http://localhost:8800/query/customerQry
+curl -X POST http://localhost:9002/query/customerQry
 
-curl -X POST http://localhost:8800/orm/customer/save -d "id=10005&name=Youngman&sex=male&birthday=2013-07-08&identification=110212201307083814&phoneNumber=13477496662"
+curl http://localhost:9002/orm/customer/load?id=10002
 
-curl http://localhost:8800/orm/customer/delete?id=10005
+curl -X POST http://localhost:9002/orm/customer/save -d "id=40005&name=John&sex=male&birthday=2013-07-08&identification=110212201307083814&phoneNumber=13477496662"
 
-curl http://localhost:8800/orm/customer/listOfCustomers
+curl http://localhost:9002/orm/customer/delete?id=40005
 ```
