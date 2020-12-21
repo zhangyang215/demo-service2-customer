@@ -3,13 +3,6 @@ spring:
     name: service-customer
   profiles:
       active: dev
-  cloud:
-    config:
-      uri: ${GIT_URL:http://localhost:9000/}
-      failFast: false
-      # discovery:
-      #   enabled: true
-      #   serviceId: service-config
 
 mybatis:
   mapperLocations: classpath*:mapper/*Mapper.xml
@@ -51,16 +44,3 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://localhost:9001/eureka/
----
-spring:
-  profiles: docker
-
-server:
-  port: ${SERVICE_PORT:9002}
-
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: ${REGISTRY_URL}
