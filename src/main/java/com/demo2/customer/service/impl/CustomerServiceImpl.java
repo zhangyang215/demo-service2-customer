@@ -4,6 +4,9 @@
 package com.demo2.customer.service.impl;
 
 import com.demo2.support.dao.BasicDao;
+
+import java.util.List;
+
 import com.demo2.customer.entity.Address;
 import com.demo2.customer.entity.Customer;
 import com.demo2.customer.service.CustomerService;
@@ -46,5 +49,13 @@ public class CustomerServiceImpl implements CustomerService {
 		Address address = new Address();
 		address.setId(id);
 		return dao.load(id, address);
+	}
+	@Override
+	public List<Customer> loadMore(List<Long> ids) {
+		return dao.loadForList(ids, new Customer());
+	}
+	@Override
+	public List<Address> loadAddresses(List<Long> ids) {
+		return dao.loadForList(ids, new Address());
 	}
 }

@@ -17,10 +17,8 @@ spring:
   profiles: dev
   cloud:
     config:
+      uri: ${GIT_URL:http://localhost:9000}
       failFast: false
-      discovery:
-        enabled: true
-        serviceId: service-config
   sleuth:
     enabled: false
   datasource:
