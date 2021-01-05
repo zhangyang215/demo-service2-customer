@@ -2,7 +2,10 @@ spring:
   application:
     name: service-customer
   profiles:
-      active: dev
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 mybatis:
   mapperLocations: classpath*:mapper/*Mapper.xml
 feign:
@@ -22,7 +25,7 @@ spring:
   sleuth:
     enabled: false
   datasource:
-    url: jdbc:mysql://47.105.194.89:32306/demo
+    url: jdbc:mysql://47.105.194.89:32306/demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
     username: demo
     password: 1234
     type: com.alibaba.druid.pool.DruidDataSource

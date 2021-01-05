@@ -40,13 +40,13 @@ public class CustomerServiceTest {
 		customer.setId(id);
 		customer.setName("Johnwood");
 		customer.setSex("Male");
-		customer.setBirthday(DateUtils.getDate("1999-01-01 00:00:00","YYYY-MM-DD hh:mm:ss"));
+		customer.setBirthday(DateUtils.getDate("2013-07-08","yyyy-MM-dd"));
 		customer.setIdentification("110211199901013322");
 		customer.setPhoneNumber("010-88897070");
 		service.save(customer);
 		
 		Customer actual = service.load(id);
-		actual.setExclude(new String[] {"birthday","addresses"});
+		actual.setExclude(new String[] {"addresses"});
 		assertThat("save and load failure! ", actual, equalTo(customer));
 		
 		service.delete(id);
@@ -71,7 +71,7 @@ public class CustomerServiceTest {
 		customer.setId(id);
 		customer.setName("Swaarzi");
 		customer.setSex("Male");
-		customer.setBirthday(DateUtils.getDate("1995-01-01 00:00:00","YYYY-MM-DD hh:mm:ss"));
+		customer.setBirthday(DateUtils.getDate("1995-01-01","yyyy-MM-dd"));
 		customer.setIdentification("110211199501013344");
 		customer.setPhoneNumber("010-88896666");
 		
@@ -101,7 +101,6 @@ public class CustomerServiceTest {
 		service.save(customer);
 		
 		Customer actual = service.load(id);
-		actual.setExclude(new String[] {"birthday","addresses"});
 		assertThat(actual, equalTo(customer));
 		
 		service.delete(id);
